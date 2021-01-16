@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="shortcut icon" href="frutas.ico" type="image/ico">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <title>Match ADA</title>
+</head>
+
+<body>
+    <div class="contenedor-general">
+        <h1 class="encabezado">MatchADAs</h1>
+        <div class="controles">
+            <div class="control-puntaje">
+                <p>Combo <span id="combo">x1</span></p>
+                <p>Puntos: <span id="puntaje-parcial">0</span></p>
+            </div>
+            <div class="botones-control">
+                <button id="boton-ayuda"><span><i class="fas fa-info-circle"></i></span></button>
+                <button id="boton-reiniciar"><span><i class="fas fa-redo-alt"></i></span></button>
+
+            </div>
+        </div>
+
+        <div class="contenedor-grilla">
+            <div id="grilla" class="grilla"></div>
+        </div>
+
+        <div class="contador-tiempo">
+            <i class="fas fa-hourglass-half"></i>
+            <p><span id="tiempo-de-juego">0:30</span></p>
+
+        </div>
+    </div>
+
+
+    <div id="modal-bienvenida" class="overlay hidden">
+        <div class="modal ">
+            <h2>¡Bienvenid@!</h2>
+            <p>En MatchADAs tu objetivo es juntar 3 o más ítems del mismo tipo,
+                ya sea en fila o columna. Para eso, selecciona un ítem y a continuación
+                un ítem adyacente para intercambiarlos de lugar.
+                Si se forma un grupo, esos ítems se eliminarán y ganarás puntos. ¡Sigue armando grupos
+                de 3 o más antes que se acabe el tiempo!
+            </p>
+          
+                <h4>Controles</h4>
+                <p>Click izquierdo: selección</p>
+                <p>Enter o espacio: selección</p>
+                <p>Flechas o WASD: movimientos e intercambios</p>
+           
+            <div class="modal-botones">
+                <button id="inicio-juego" class="botones">A Jugar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-dificultad" class="overlay hidden">
+        <div class="modal">
+            <h2>Nuevo Juego</h2>
+            <p>Selecciona una dificultad</p>
+            <div class="modal-botones">
+                <button id="facil" class="botones">Fácil</button>
+                <button id="mediano" class="botones">Mediano</button>
+                <button id="dificil" class="botones">Difícil</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-gameover" class="overlay hidden">
+        <div class="modal">
+            <h2>¡Juego Terminado!</h2>
+            <p>Puntaje final: <span id="puntaje-final">0</span></p>
+            <div class="modal-botones">
+                <button id="nuevo-juego" class="botones">Nuevo Juego</button>
+                <button id="reiniciar" class="botones">Reiniciar</button>
+
+            </div>
+        </div>
+
+    </div>
+   
+    <div id="modal-reiniciar" class="overlay hidden">
+        <div class="modal">
+            <h2>¿Estás segur@ que querés reiniciar el juego?</h2>
+            <p>Perderás todo tu puntaje acumulado</p>
+
+            <div class="modal-botones">
+                <button id="cancelar" class="botones">Cancelar</button>
+                <button id="nuevo-juego-reiniciar" class="botones">Nuevo Juego</button>
+                
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
